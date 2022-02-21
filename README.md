@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
+# Fake server / JSON server / API
+The project contains a folder called JSON-server. Navigate to this folder and run `npm start`. This will boot up a fake server that can serve the JSON objects to the application.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

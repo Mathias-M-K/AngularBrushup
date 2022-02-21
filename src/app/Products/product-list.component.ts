@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   productListSubscription! : Subscription;
 
   private _listFilter: string = '';
+
   get listFilter(): string{
     return this._listFilter;
   }
@@ -32,6 +33,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   products: IProduct[] = [];
 
   constructor(private productService : ProductService) {
+
   }
 
   toggleImage() : void {

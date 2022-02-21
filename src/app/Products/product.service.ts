@@ -11,7 +11,7 @@ import {catchError, Observable, tap, throwError} from "rxjs";
 
 export class ProductService{
 
-  private productUrl = 'api/products/products.json';
+  private productUrl = 'http://localhost:3000/Products';
 
   constructor(private http: HttpClient) {
   }

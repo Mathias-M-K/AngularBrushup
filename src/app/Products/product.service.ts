@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {IProduct} from "./product";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-import {catchError, Observable, tap, throwError} from "rxjs";
+import {catchError, delay, Observable, tap, throwError} from "rxjs";
 
 
 
@@ -16,12 +16,13 @@ export class ProductService{
   constructor(private http: HttpClient) {
   }
 
-
   getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.productUrl).pipe(
-      tap(data => console.log('Products received', data)),
-      catchError(this.handleError)
-    );
+
+      return this.http.get<IProduct[]>(this.productUrl).pipe(delay(3000),
+        tap(data => console.log('Products received', data)),
+        catchError(this.handleError)
+      );
+
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {

@@ -1,4 +1,4 @@
-import { Component,HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import {
   trigger,
   state,
@@ -9,9 +9,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css'],
+  selector: 'app-animation-panel',
+  templateUrl: './animation-panel.component.html',
+  styleUrls: ['./animation-panel.component.css'],
   animations: [
     trigger('showHide', [
       // ...
@@ -29,22 +29,19 @@ import {
       ])
     ]),
   ]
+
 })
 
-export class WelcomeComponent implements OnInit {
+export class AnimationPanelComponent implements OnInit {
+
   isOpen = true;
 
-  showAnimationPanel : boolean = false;
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
 
   ngOnInit(): void {
+
   }
 
-  toggleAnimationPanel():void{
-    this.showAnimationPanel = !this.showAnimationPanel;
-  }
+
 
 }

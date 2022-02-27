@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   showImage = false;
   errorMsg : string = "";
   showBuffer = true;
+  bufferText :string = "Loading...";
   productListSubscription! : Subscription;
 
   private _listFilter: string = '';
@@ -59,6 +60,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
       },
       error : err => {
         this.errorMsg = err;
+        this.bufferText = "Could not fetch product list :("
       }
     });
     //this.filteredProducts = this.products;

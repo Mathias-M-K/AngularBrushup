@@ -1,0 +1,14 @@
+<div class="card">
+
+  <div class="card-header">Animate me in!</div>
+  <div class="card-body">
+    I will try and animate this panel in.
+
+    <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+      <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+    </div>
+  </div>
+
+
+
+</div>

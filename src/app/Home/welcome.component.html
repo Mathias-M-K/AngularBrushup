@@ -1,17 +1,20 @@
-
-
-
-
-
 <div class="card-header" style="background-color: #005D36; border-radius: 7px; height: 40px; width: 100%; margin-bottom: 10px">
   <img src="https://omjyskebank.dk/wp-content/uploads/2018/10/jb-logo-svg-negativ-1.svg"
        style="height: 90%; vertical-align: middle"
        alt="Jyske Bank Logo">
 </div>
-<div class="card">
+<div class="card" style="margin-bottom: 20px">
 
   <div class="card-header">Welcome</div>
   <div class="card-body">
-    See the product tab for products.
+    <p>See the product tab for products.</p>
+    <button class="btn btn-outline-secondary" style="width:120px" (click)="toggleAnimationPanel()">spawn 1</button>
   </div>
+
+
+
 </div>
+<div @showHide *ngIf="showAnimationPanel">
+  <app-animation-panel [@openClose]="isOpen ? 'open' : 'closed'"></app-animation-panel>
+</div>
+

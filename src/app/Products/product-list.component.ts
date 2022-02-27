@@ -15,6 +15,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   imageMargin = 2;
   showImage = false;
   errorMsg : string = "";
+  showBuffer = true;
   productListSubscription! : Subscription;
 
   private _listFilter: string = '';
@@ -52,10 +53,13 @@ export class ProductListComponent implements OnInit, OnDestroy{
     this.productListSubscription = this.productService.getProducts().subscribe({
       next : products => {
         console.log("Products active.");
+        this.showBuffer =false;
         this.products = products;
         this.filteredProducts = this.products;
       },
-      error : err => this.errorMsg = err
+      error : err => {
+        this.errorMsg = err;
+      }
     });
     //this.filteredProducts = this.products;
   }

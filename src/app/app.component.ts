@@ -5,7 +5,7 @@ import {Component} from "@angular/core";
 
   template: `
     <nav class='navbar navbar-expand navbar-light bg-light'>
-      <a class='navbar-brand'>{{pageTitle}}</a>
+      <a class='navbar-brand' style="padding-left: 20px">{{pageTitle}}</a>
       <ul class='nav nav-pills'>
         <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Home</a></li>
         <li><a class='nav-link' routerLinkActive='active' routerLink='/products'>Product List</a></li>

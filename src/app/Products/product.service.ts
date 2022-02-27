@@ -37,7 +37,7 @@ export class ProductService{
       // The response body may contain clues as to what went wrong,
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
-    console.error(errorMessage);
+    console.error("Error fetching the product list: " + errorMessage);
     return throwError(errorMessage);
   }
 
